@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册登录界面Ⅰ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container right-panel-active">
+    <div class="container_form container--signup">
+        <form action="Manager_LoginServlet" method="post" class="form" id="from1">
+            <h2 class="form_title">管理员界面</h2>
+            <input type="email" placeholder="Email" class="input" name="emails"/>
+            <input type="password" placeholder="Password" class="input" name="password"/>
+            <a href="#" class="link" onclick="window.location.href='manager_register.html'; return false;">注册</a>
+            <button class="btn">登录</button>
+        </form>
+    </div>
+    <div class="container_form container--signin">
+        <form action="Customer_LoginServlet" method="post" class="form" id="form2">
+            <h2 class="form_title">学生界面</h2>
+            <input type="email" placeholder="Email" class="input" name="emails"/>
+            <input type="password" placeholder="Password" class="input" name="password"/>
+            <a href="#" class="link" onclick="window.location.href='customer_register.html'; return false;">注册</a>
+            <button class="btn">登录</button>
+        </form>
+    </div>
+
+    <!-- 浮层 -->
+    <div class="container_overlay">
+        <div class="overlay">
+            <div class="overlay_panel overlay--left">
+                <button class="btn" id="signIn">学生登录</button>
+            </div>
+            <div class="overlay_panel overlay--right">
+                <button class="btn" id="signUp">管理员登录</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 背景 -->
+<div class="slidershow">
+    <div class="slidershow--image" style="background-image: url('./images/1cda408e61e7e810bebd9fe621e2f16.jpg');"></div>
+    <div class="slidershow--image" style="background-image: url('./images/5da662a039ac8334b702d7f4efbb07c.jpg');"></div>
+    <div class="slidershow--image" style="background-image: url('./images/caa8a5c7c96541af3df3a329b36ba9f.jpg');"></div>
+</div>
+
+<!-- partial -->
+<script src="login.js"></script>
+
+</html>
